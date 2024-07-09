@@ -1,0 +1,18 @@
+.wrapper{
+    margin: 20px 10px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #fff;
+}
+
+.wrapper-img{
+    width: 20%;
+}
+
+.wrapper-text{
+    width: 80%;
+    padding: 0 10px;
+    font-size: 1.2rem;
+}

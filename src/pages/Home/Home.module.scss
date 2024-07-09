@@ -1,0 +1,35 @@
+.container{
+    width: 900px;
+}
+
+.slide{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.slide-show{
+    width: 66%;
+}
+
+.category{
+    width: 32%;
+}
+
+.featured{
+    margin-top: 30px;
+}
+
+.categories-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.business, .technology, .sport{
+    width: 50%;
+}
+
+.entertainment{
+    width: 50%;
+}

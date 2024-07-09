@@ -1,0 +1,30 @@
+.wrapper{
+    height: 200px;
+    background-color: #fff;
+    width: 50%;
+    margin: 0 10px 0 10px;
+}
+
+.img{
+    height: 50%;
+    background-size: cover;
+}
+
+.info{
+    height: 50%;
+    position: relative;
+}
+
+.date {
+    position: absolute;
+    top: 30%;
+    padding: 0 20px;
+    font-size: 1.3rem;
+}
+
+.des{
+    position: absolute;
+    top: 50%;
+    padding: 0 20px;
+    font-size: 1.6rem;
+}
