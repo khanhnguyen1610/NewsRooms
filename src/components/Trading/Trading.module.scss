@@ -1,0 +1,47 @@
+.title{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 40px;
+    margin-top: 20px;
+    p{
+        padding-left: 20px;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+
+    .img{
+        width: 30%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .info{
+        width: 70%;
+        height: 100%;
+        padding: 20px;
+        
+        .category{
+            font-size: 1.2rem;
+        }
+    
+        .category-color{
+            color: red;
+        }
+
+        .title-card{
+            margin-top: 10px;
+            font-size: 1.6rem;
+        }
+    }
+}

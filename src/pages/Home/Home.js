@@ -10,6 +10,13 @@ import Entertainment from "./Categories/Entertainment/Entertainment";
 import Technology from "./Categories/Technology/Technology";
 import Sport from "./Categories/Sport/Sport";
 import Featured from "./Featured/Featured";
+import FollowUs from "../../components/FollowUS/FollowUs";
+import Newsletter from "../../components/Newsletter/Newsltter";
+import FeaturedSmallCard from "./Featured/FeaturedSmallCard/FeaturedSmallCard";
+import Latest from "./Lastest/Latest";
+import LatestSmallCard from "./Lastest/LatestSmallCard/LatestSmallCard";
+import Trading from "../../components/Trading/Trading";
+import Tags from "../../components/Tags/Tags";
 
 const cx = classNames.bind(styles);
 
@@ -37,10 +44,22 @@ function Home(){
                 </div>
                 <div className={cx('block-row')}>
                     <div className={cx('block-left')}>
-                        <div className={cx('featured')}><Featured /></div>
+                        <div className={cx('featured')}>
+                            <Featured />
+                            <FeaturedSmallCard />
+                        </div>
+                        <div className={cx('ad')}>ads</div>
+                        <div className={cx('Latest')}>
+                            <Latest />
+                            <LatestSmallCard />
+                        </div>
                     </div>
                     <div className={cx('block-right')}>
-                        <div>folling</div>
+                        <div className={cx('following')}><FollowUs /></div>
+                        <div className={cx('newsletter')}><Newsletter /></div>
+                        <div className={cx('image')}></div>
+                        <div className={cx('tranding')}><Trading /></div>
+                        <div className={cx('tags')}><Tags head={"Tags"} /></div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,22 @@
+.title{
+    margin-bottom: 20px;
+    h2{
+        font-size: 1.6rem;
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    font-size: 1.4rem;
+    width: 50%;
+}
+
+.image {
+    width: 50%;
+    height: 200px;
+    margin-right: 20px;
+}

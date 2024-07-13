@@ -1,0 +1,26 @@
+.title{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 40px;
+    p{
+        padding-left: 20px;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+}
+
+.tags{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    span{
+        padding: 5px;
+        border: 1px solid #ccc;
+        font-size: 1.2rem;
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+}

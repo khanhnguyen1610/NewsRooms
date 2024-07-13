@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from './Featured.module.scss';
 import CardFeatured from "./CardFetured";
@@ -6,25 +6,45 @@ import CardFeatured from "./CardFetured";
 const cx = classNames.bind(styles);
 
 function Featured(){
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 600);
+        };
+
+        // Initial check
+        handleResize();
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup event listener
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
     const items = [
         {
             id: 1,
-            title: "Technology",
-            des: "lorem technnogy",
+            title: "Est stet emet ipsum stet clita rebum duo",
+            category: "Technology",
+            des: "lorem technnogy lorem demo lorem technnogy lorem demo lorem technnogy lorem demo lorem technnogy",
             date: "January 01, 2015",
             img: "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
         },
         {
             id: 2,
-            title: "Business",
+            title: "Est stet emet ipsum stet clita rebum duo",
+            category: "Technology",
             date: "January 01, 2015",
-            des: "lorem technnogy",
+            des: "lorem technnogy lorem demo lorem technnogy lorem demo lorem technnogy lorem demo lorem technnogy",
             img: "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
         }
-    ] 
+    ];
+    
+    const filteredItems = isMobile ? items.slice(0, 1) : items;
 
-    const renderItems = items.map((item) =>{
-        return <CardFeatured key={item.id} title={item.title} date={item.date} des={item.des} img={item.img}/>
+    const renderItems = filteredItems.map((item) =>{
+        return <CardFeatured key={item.id} title={item.title} category={item.category} date={item.date} des={item.des} img={item.img}/>
     })
 
     return(

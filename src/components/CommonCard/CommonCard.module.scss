@@ -1,0 +1,40 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 46.5%;
+    background-color: #fff;
+    margin: 10px;
+
+    .img{
+        width: 30%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .info{
+        width: 70%;
+        height: 100%;
+        padding: 20px;
+        
+        .category{
+            font-size: 1.2rem;
+        }
+    
+        .category-color{
+            color: red;
+        }
+
+        .title-card{
+            margin-top: 10px;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .wrapper{
+        width: auto;
+    }
+}

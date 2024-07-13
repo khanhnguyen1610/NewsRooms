@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from '../common.module.scss';
 import classNames from "classnames/bind";
 import CategoriesCard from "../../../../components/CategogiesCard/CategoriesCard";
+import {  RightOutlined, LeftOutlined } from '@ant-design/icons';
 
 const cx = classNames.bind(styles);
 
 function Entertainment(){
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 600);
+        };
+
+        // Initial check
+        handleResize();
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup event listener
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
     const items = [
         {
             id: 1,
@@ -21,7 +38,9 @@ function Entertainment(){
         },
     ]
 
-    const renderItem = items.map((item) =>{
+    const filteredItems = isMobile ? items.slice(0, 1) : items;
+
+    const renderItem = filteredItems.map((item) =>{
         return <CategoriesCard key={item.id} date={item.date} des={item.des} img={item.img}/>
     })
 
@@ -29,7 +48,7 @@ function Entertainment(){
         <>
             <div className={cx('title')}>
                 <p>Entertainment</p>
-                <div><span>x</span><span>x</span></div>
+                <div><span><LeftOutlined /></span><span><RightOutlined /></span></div>
             </div>
             <div className={cx('card-wrapper')}>{renderItem}</div>
         </>

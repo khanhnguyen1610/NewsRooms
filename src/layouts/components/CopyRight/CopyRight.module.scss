@@ -1,0 +1,15 @@
+.wrapper{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    .icon{
+        display: inline-block;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .text-color{
+        color: red;
+    }
+}

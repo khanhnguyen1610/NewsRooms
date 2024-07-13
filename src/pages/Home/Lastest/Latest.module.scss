@@ -1,0 +1,26 @@
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 40px;
+    margin: 10px;
+
+    p{
+        padding-left: 20px;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    span{
+        font-size: 1.2rem;
+        padding-right: 20px;
+        opacity: .6;
+        cursor: pointer;
+    }
+}
+
+.latest{
+    display: flex;
+    justify-content: space-between;
+}

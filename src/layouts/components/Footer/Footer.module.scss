@@ -1,0 +1,33 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    padding: 40px;
+
+    .logo{
+        width: 23%;
+    }
+
+    .categories{
+        width: 23%;
+    }
+
+    .tags{
+        width: 23%;
+    }
+
+    .quick-link{
+        width: 23%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .footer{
+        display: block;
+    }
+
+    .logo, .categories, .quick-link, .tags{
+        width: auto !important;
+    }
+}

@@ -1,32 +1,52 @@
+.header{
+    width: 1440px;
+}
 .wrapper{
     width: 100%;
     background-color: rgb(235, 234, 234);
 }
 
+.menu{
+    width: 100%;
+    background-color: white;
+}
+
+.logo-mobile{
+    display: none;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+
 .logo{
-    width: 1440px;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 10px 40px;
 
     h1{
         font-size: 3rem;
         text-transform: uppercase;
         font-weight: 800;
-
         span{
             color: rgb(254, 24, 24);
         }
     }
 
+    p{
+        width: 50%;
+        height: 70px;
+        background-color: black;
+        color: #fff;
+    }
 
 }
 
 .wrapper-menu{
-    width: 1440px;
-    max-width: 100%;
+    width: 100%;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
@@ -67,16 +87,82 @@
     border: 1px solid #ccc;
     border-radius: 2px;
     span{
-        border: 1px solid #ccc;
+        border-left: 1px solid #ccc;
         display: flex;
         width: 26px;
         height: 22px;
         justify-content: center;
         align-items: center;
+        background-color: #ccc;
     }
 }
 
 .search-input{
     outline: none;
     border: none;
+}
+
+@media screen and (max-width: 600px) {
+    .logo{
+        padding: 0;
+        h1{
+            display: none;
+        }
+
+        p{
+            width: 100%;
+            margin: 10px;
+        }
+    }
+
+    .logo-mobile{
+        display: block;
+        padding: 10px 0;
+        h1{
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        span{
+            color: rgb(254, 24, 24);
+        }
+    }
+
+    p{
+        width: 50%;
+        height: 70px;
+        background-color: black;
+        color: #fff;
+    }
+    }
+
+    .menu-mobile{
+        display: block;
+        font-size: 2.5rem;
+        cursor: pointer;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .wrapper-menu{
+        padding: 0 10px;
+        align-items: center;
+    }
+
+    .menu{
+        position: relative;
+    }
+
+    .menuList{
+        position: absolute;
+        right: 0;
+        top: 100%;
+        display: none;
+        z-index: 1;
+    }
+
+    .menuItem{
+        background-color: #fff;
+    }
 }
