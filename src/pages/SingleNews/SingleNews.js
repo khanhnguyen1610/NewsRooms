@@ -12,6 +12,7 @@ import Form from "./Form/Form";
 const cx = classNames.bind(styles);
 
 function SingleNews(){
+
     return(
     <div className={cx('wrapper')}>
         <p className={cx('direct')}><span>Home</span> / <span>Category</span> / <span>Technology</span> / News Title</p>

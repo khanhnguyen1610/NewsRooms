@@ -8,6 +8,7 @@ const publicRoutes = [
     {path: config.routes.home, component: Home },
     {path: config.routes.categories, component: Categories },
     {path: config.routes.singleNews, component: SingleNews },
+    {path: config.routes.singleNewsDetail, component: SingleNews },
     {path: config.routes.contact, component: Contact },
 ]
 

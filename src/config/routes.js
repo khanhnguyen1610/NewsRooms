@@ -3,6 +3,7 @@ const routes = {
     categories: '/categories',
     contact: '/contact',
     singleNews: '/singleNews',
+    singleNewsDetail: '/singleNews/:id',
   };
   
-  export default routes;
+export default routes;

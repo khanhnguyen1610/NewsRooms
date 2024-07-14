@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 function Categories(){
     
     const { products } = useProducts();
-
+    console.log(products);
     const renderCategories = products.map((category) =>{
         return <Card key={category.id} category={category.category} img={category.image}/>
     })
