@@ -41,7 +41,7 @@ function Entertainment(){
     const filteredItems = isMobile ? items.slice(0, 1) : items;
 
     const renderItem = filteredItems.map((item) =>{
-        return <CategoriesCard key={item.id} date={item.date} des={item.des} img={item.img}/>
+        return <CategoriesCard key={item.id} id={item.id} date={item.date} des={item.des} img={item.img}/>
     })
 
     return (
