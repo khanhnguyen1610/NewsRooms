@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 function CategoriesCard({id, date, des, img}) {
     return(
         <>
-            <Link to={`${config.routes.singleNews}/${id}`} className={cx('wrapper')}>
+            <Link to={`${config.routes.singleNewsDetail}/${id}`} className={cx('wrapper')}>
                 <div style={{'backgroundImage': `url(${img})`}} className={cx('img')}></div>
                 <div className={cx('info')}>
                     <p className={cx('date')}>{date}</p>

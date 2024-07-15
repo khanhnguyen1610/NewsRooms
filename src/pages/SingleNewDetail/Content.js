@@ -10,7 +10,10 @@ import useProductDetail from "../../services/useProductDetail";
 const cx = classNames.bind(styles);
 
 function Content(){
+    const {id} = useParams()
     
+    const { productDetail, loading, error } = useProductDetail(id);
+
     const item = [
         {
             id: 1,
@@ -23,32 +26,42 @@ function Content(){
         }
     ]; 
 
+    if (loading) {
+        return <div>Loading...</div>;
+      }
+    
+    if (error) {
+    return <div>Error: {error}</div>;
+    }
+    console.log(productDetail);
+    const product = productDetail;
+
     return (
         <div className={cx('wrapper-content')}>
             <div className={cx('header-content')}>
                 <HeaderContent 
-                    key={item[0]?.id}
-                    title={item[0]?.title}
-                    category={item[0]?.category}
-                    des={item[0]?.des}
-                    date={item[0]?.date}
-                    img={item[0]?.image}
+                    key={productDetail?.id}
+                    title={productDetail?.title}
+                    category={productDetail?.category}
+                    des={productDetail?.des}
+                    date={productDetail?.date}
+                    img={productDetail?.image}
                 />
             </div>
             <div className={cx('middle-content')}>
                 <MiddleContent
-                    title={item[0].title}
-                    key={item[0].id}
-                    img={item[0].image}
-                    text={item[0].text}
+                    title={productDetail.title}
+                    key={productDetail.id}
+                    img={productDetail.image}
+                    text={productDetail.text}
                 />
             </div>
             <div className={cx('footer-content')}>
                 <FooterContent
-                    title={item[0].title}
-                    key={item[0].id}
-                    img={item[0].image}
-                    text={item[0].text}
+                    title={productDetail.title}
+                    key={productDetail.id}
+                    img={productDetail.image}
+                    text={productDetail.text}
                 />
             </div>
         </div>

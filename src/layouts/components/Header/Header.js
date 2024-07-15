@@ -14,6 +14,10 @@ function Header(){
         setOpen((prevOpen) => (prevOpen === "" ? "block" : ""));
     }
 
+    const handleCloseMenu = () =>{
+        setOpen("");
+    }
+
     return (
         <header className={cx('header')}>
             <div className={cx('wrapper')}>
@@ -28,11 +32,11 @@ function Header(){
                         <h1><span>News</span>Room</h1>
                     </div>
                     <ul className={cx('menuList')} style={{"display": open}}>
-                        <NavLink to={config.routes.home} className={(nav) => cx('menuItem', {active: nav.isActive})}>Home </NavLink>
-                        <NavLink to={config.routes.categories} className={(nav) => cx('menuItem', {active: nav.isActive})}>Categories</NavLink>
-                        <NavLink to={config.routes.singleNews} className={(nav) => cx('menuItem', {active: nav.isActive})}>Single News</NavLink>
+                        <NavLink to={config.routes.home} className={(nav) => cx('menuItem', {active: nav.isActive})} onClick={handleCloseMenu}>Home </NavLink>
+                        <NavLink to={config.routes.categories} className={(nav) => cx('menuItem', {active: nav.isActive})} onClick={handleCloseMenu}>Categories</NavLink>
+                        <NavLink to={config.routes.singleNews} className={(nav) => cx('menuItem', {active: nav.isActive})} onClick={handleCloseMenu}>Single News</NavLink>
                         <li className={cx('menuItem')}>Drops Down</li>
-                        <NavLink to={config.routes.contact} className={(nav) => cx('menuItem', {active: nav.isActive})}>Contact</NavLink>
+                        <NavLink to={config.routes.contact} className={(nav) => cx('menuItem', {active: nav.isActive})} onClick={handleCloseMenu}>Contact</NavLink>
                     </ul>
                     <div className={cx('menu-mobile')} onClick={handleMenuOpen}><MenuOutlined /></div>
                     <div className={cx('search')}>

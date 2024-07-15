@@ -2,8 +2,8 @@ const routes = {
     home: '/',
     categories: '/categories',
     contact: '/contact',
+    singleNewsDetail: '/singleNewsDetail',
     singleNews: '/singleNews',
-    singleNewsDetail: '/singleNews/:id',
   };
   
 export default routes;
